@@ -1,0 +1,6 @@
+
+CC-0:
+Vegur-Bold
+Vegur-Light
+Vegur-Regular
+From: https://fontlibrary.org/en/font/vegur

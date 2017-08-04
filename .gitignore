@@ -1,0 +1,20 @@
+# Godot-specific
+.import/
+export.cfg
+export_presets.cfg
+
+# Binaries
+html-bin/
+linux32/
+linux64/
+mac/
+win32/
+win64/
+
+# Project Exports
+stonemont_*.zip
+
+# Other
+.directory
+*~
+*.DS_Store

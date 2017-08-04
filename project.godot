@@ -1,0 +1,36 @@
+config_version=3
+
+config_version=null
+
+[application]
+
+config/name="The Stonemont Chronicles"
+run/main_scene="res://game.tscn"
+boot_splash/image="res://resources/Splashscreen.png"
+boot_splash/bg_color=Color( 1, 1, 1, 1 )
+config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://Globals.gd"
+
+[display]
+
+window/size/width=1200
+window/size/height=900
+window/stretch/mode="2d"
+
+[input]
+
+dbg_flags=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":70,"unicode":0,"echo":false,"script":null)
+ ]
+dbg_variables=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":86,"unicode":0,"echo":false,"script":null)
+ ]
+dbg_click=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+dbg_aggressiveness=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

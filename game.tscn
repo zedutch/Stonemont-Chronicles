@@ -1,0 +1,1338 @@
+[gd_scene load_steps=70 format=2]
+
+[ext_resource path="res://EventManager.gd" type="Script" id=1]
+[ext_resource path="res://resources/map_full.png" type="Texture" id=2]
+[ext_resource path="res://Province.gd" type="Script" id=3]
+[ext_resource path="res://resources/Province 1 Enemy 4.png" type="Texture" id=4]
+[ext_resource path="res://resources/Province 1 Enemy 1.png" type="Texture" id=5]
+[ext_resource path="res://resources/Province 1 Enemy 3.png" type="Texture" id=6]
+[ext_resource path="res://resources/Province 1.png" type="Texture" id=7]
+[ext_resource path="res://resources/Province 1 Enemy 2.png" type="Texture" id=8]
+[ext_resource path="res://resources/poor.png" type="Texture" id=9]
+[ext_resource path="res://resources/Wealth_under.png" type="Texture" id=10]
+[ext_resource path="res://resources/Wealth_over.png" type="Texture" id=11]
+[ext_resource path="res://resources/Wealth_progress.png" type="Texture" id=12]
+[ext_resource path="res://resources/rich.png" type="Texture" id=13]
+[ext_resource path="res://resources/Province 2.png" type="Texture" id=14]
+[ext_resource path="res://resources/Province 2 Enemy 4.png" type="Texture" id=15]
+[ext_resource path="res://resources/Province 2 Enemy 1.png" type="Texture" id=16]
+[ext_resource path="res://resources/Province 2 Enemy 3.png" type="Texture" id=17]
+[ext_resource path="res://resources/Province 2 Enemy 2.png" type="Texture" id=18]
+[ext_resource path="res://resources/Province 3 Enemy 4.png" type="Texture" id=19]
+[ext_resource path="res://resources/Province 3 Enemy 1.png" type="Texture" id=20]
+[ext_resource path="res://resources/Province 3 Enemy 3.png" type="Texture" id=21]
+[ext_resource path="res://resources/Province 3.png" type="Texture" id=22]
+[ext_resource path="res://resources/Province 3 Enemy 2.png" type="Texture" id=23]
+[ext_resource path="res://resources/Province 4 Enemy 4.png" type="Texture" id=24]
+[ext_resource path="res://resources/Province 4 Enemy 1.png" type="Texture" id=25]
+[ext_resource path="res://resources/Province 4 Enemy 3.png" type="Texture" id=26]
+[ext_resource path="res://resources/Province 4.png" type="Texture" id=27]
+[ext_resource path="res://resources/Province 4 Enemy 2.png" type="Texture" id=28]
+[ext_resource path="res://resources/Province 5 Enemy 4.png" type="Texture" id=29]
+[ext_resource path="res://resources/Province 5 Enemy 1.png" type="Texture" id=30]
+[ext_resource path="res://resources/Province 5 Enemy 3.png" type="Texture" id=31]
+[ext_resource path="res://resources/Province 5.png" type="Texture" id=32]
+[ext_resource path="res://resources/Province 5 Enemy 2.png" type="Texture" id=33]
+[ext_resource path="res://EnemyProvince.gd" type="Script" id=34]
+[ext_resource path="res://resources/Neighbour 1.png" type="Texture" id=35]
+[ext_resource path="res://resources/Neighbour 2.png" type="Texture" id=36]
+[ext_resource path="res://resources/Neighbour 3.png" type="Texture" id=37]
+[ext_resource path="res://resources/Neighbour 4.png" type="Texture" id=38]
+[ext_resource path="res://CouncilController.gd" type="Script" id=39]
+[ext_resource path="res://option.tscn" type="PackedScene" id=40]
+[ext_resource path="res://fonts/Vegur-Light.otf" type="DynamicFontData" id=41]
+[ext_resource path="res://fonts/Vegur-Bold.otf" type="DynamicFontData" id=42]
+[ext_resource path="res://PortraitController.gd" type="Script" id=43]
+[ext_resource path="res://resources/archbishop.png" type="Texture" id=44]
+[ext_resource path="res://resources/merchant.png" type="Texture" id=45]
+[ext_resource path="res://resources/advisor.png" type="Texture" id=46]
+[ext_resource path="res://resources/general.png" type="Texture" id=47]
+[ext_resource path="res://resources/baroness.png" type="Texture" id=48]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "enemy4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "enemy1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "enemy3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": false,
+"name": "player",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "enemy2",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFontData" id=2]
+
+font_path = "res://fonts/Vegur-Regular.otf"
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 2 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "enemy4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "enemy1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "enemy3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "enemy2",
+"speed": 5.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "enemy4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "enemy1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "enemy3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": false,
+"name": "player",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "enemy2",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+
+animations = [ {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "enemy4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "enemy1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ) ],
+"loop": true,
+"name": "enemy3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": false,
+"name": "player",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 28 ) ],
+"loop": true,
+"name": "enemy2",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+
+animations = [ {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "enemy4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "enemy1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ) ],
+"loop": true,
+"name": "enemy3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ) ],
+"loop": false,
+"name": "player",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 33 ) ],
+"loop": true,
+"name": "enemy2",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+
+animations = [ {
+"frames": [ ExtResource( 35 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="SpriteFrames" id=9]
+
+animations = [ {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="SpriteFrames" id=10]
+
+animations = [ {
+"frames": [ ExtResource( 37 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=11]
+
+animations = [ {
+"frames": [ ExtResource( 38 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="StyleBoxFlat" id=12]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.710938, 0.710938, 0.710938, 1 )
+light_color = Color( 0, 0, 0, 1 )
+dark_color = Color( 0, 0, 0, 1 )
+border_size = 2
+border_blend = false
+draw_bg = true
+
+[sub_resource type="DynamicFontData" id=13]
+
+font_path = "res://fonts/Vegur-Bold.otf"
+
+[sub_resource type="DynamicFont" id=14]
+
+size = 24
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 13 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=15]
+
+size = 20
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 41 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=16]
+
+size = 20
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 42 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFont" id=17]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 2 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="StyleBoxFlat" id=18]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.239136, 0.67041, 0.666504, 1 )
+light_color = Color( 0, 0, 0, 1 )
+dark_color = Color( 0, 0, 0, 1 )
+border_size = 2
+border_blend = false
+draw_bg = true
+
+[sub_resource type="DynamicFont" id=19]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 41 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=20]
+
+font_path = "res://fonts/Vegur-Light.otf"
+
+[sub_resource type="DynamicFont" id=21]
+
+size = 20
+use_mipmaps = true
+use_filter = false
+font_data = SubResource( 20 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="root" type="Node"]
+
+script = ExtResource( 1 )
+
+[node name="world" type="Node2D" parent="."]
+
+position = Vector2( 600, 450 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bg_test" type="Sprite" parent="world"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="prov1" type="Node2D" parent="world"]
+
+script = ExtResource( 3 )
+name = "Lanhill"
+wealth = 50
+
+[node name="sprite" type="AnimatedSprite" parent="world/prov1"]
+
+frames = SubResource( 1 )
+animation = "player"
+
+[node name="area" type="Area2D" parent="world/prov1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="polygon" type="CollisionPolygon2D" parent="world/prov1/area"]
+
+build_mode = 0
+polygon = PoolVector2Array( -301.939, 59.0887, -304.263, 49.2094, -305.038, 40.105, -307.75, 27.1263, -296.127, -7.54803, -304.263, -23.045, -300.776, -38.1544, -293.028, -52.8765, -302.713, -80.771, -313.755, -92.7811, -311.624, -108.084, -313.755, -134.816, -309.106, -135.979, -281.211, -136.56, -271.332, -139.272, -266.296, -135.204, -259.322, -137.916, -253.704, -143.34, -238.207, -140.822, -221.548, -141.596, -220.967, -136.366, -208.57, -134.429, -204.889, -137.141, -192.492, -134.042, -180.675, -129.199, -179.319, -132.105, -162.079, -126.293, -152.974, -126.874, -143.87, -121.45, -137.284, -122.806, -133.991, -117.77, -127.986, -119.707, -132.247, -129.005, -115.588, -120.288, -117.332, -115.252, -105.128, -114.671, -99.7038, -118.157, -94.861, -116.608, -91.5679, -119.707, -84.2068, -118.932, -81.8823, -107.116, -86.7251, -101.111, -83.2383, -91.0377, -90.793, -86.1949, -87.4999, -81.3521, -91.7616, -70.698, -88.0811, -69.5357, -94.0861, -63.1432, -95.4421, -54.0388, -90.0182, -37.3796, -97.1855, -31.3746, -97.5729, -25.757, -92.7302, -25.9507, -93.3113, -18.7833, -96.7981, -18.2022, -91.5679, -13.7468, -95.2484, -4.06128, -100.285, -1.73672, -96.7981, 1.16895, -99.1226, 7.36771, -91.1805, 13.7602, -96.7981, 19.5715, -88.4685, 35.4559, -97.7667, 37.1993, -96.7981, 42.2358, -88.4685, 47.2723, -90.4056, 52.6962, -87.1125, 56.183, -89.6308, 61.9944, -84.9817, 70.5177, -84.0131, 73.0359, -116.557, 78.8473, -144.451, 75.1667, -167.89, 84.6586, -191.717, 65.6749, -228.134, 68.968, -239.951, 48.4345, -276.175, 47.8534, -297.096, 59.8635 )
+
+[node name="name" type="Label" parent="world/prov1"]
+
+margin_left = -246.0
+margin_top = -52.0
+margin_right = -164.0
+margin_bottom = -22.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Lanhill"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="data" type="HBoxContainer" parent="world/prov1"]
+
+editor/display_folded = true
+margin_left = -255.0
+margin_top = -22.0
+margin_right = -102.0
+margin_bottom = 18.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = -13
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="low_wealth" type="TextureRect" parent="world/prov1/data"]
+
+margin_right = 20.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="wealth" type="TextureProgress" parent="world/prov1/data"]
+
+show_behind_parent = true
+margin_left = 7.0
+margin_right = 112.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 50.0
+exp_edit = false
+rounded = false
+texture_under = ExtResource( 10 )
+texture_over = ExtResource( 11 )
+texture_progress = ExtResource( 12 )
+radial_fill_degrees = 360.0
+radial_center_offset = Vector2( 0, 0 )
+_sections_unfolded = [ "Mouse", "Radial Fill", "Rect", "Textures", "Visibility" ]
+
+[node name="high_wealth" type="TextureRect" parent="world/prov1/data"]
+
+margin_left = 99.0
+margin_right = 119.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 13 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="prov2" type="Node2D" parent="world"]
+
+script = ExtResource( 3 )
+name = "Blackhampton"
+wealth = 50
+
+[node name="sprite" type="AnimatedSprite" parent="world/prov2"]
+
+frames = SubResource( 4 )
+animation = "default"
+
+[node name="area" type="Area2D" parent="world/prov2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="polygon" type="CollisionPolygon2D" parent="world/prov2/area"]
+
+build_mode = 0
+polygon = PoolVector2Array( -312.876, -135.462, -313.925, -167.105, -303.785, -188.783, -310.604, -212.734, -294.17, -255.391, -257.282, -271.126, -230.884, -294.377, -220.569, -296.125, -205.534, -294.202, -183.681, -296.475, -192.422, -306.79, -184.031, -315.181, -171.793, -310.636, -159.38, -317.104, -150.989, -316.055, -134.031, -301.895, -104.66, -273.748, -104.752, -268.146, -98.7711, -266.011, -98.9135, -261.311, -95.0688, -262.308, -94.2144, -251.486, -89.9425, -253.053, -89.2305, -247.784, -82.9651, -249.208, -80.9716, -243.654, -77.6965, -242.088, -77.5541, -238.955, -72.0007, -236.107, -75.7029, -232.263, -67.7288, -229.842, -65.308, -224.004, -66.1624, -221.013, -59.3275, -215.602, -60.0394, -211.615, -55.4827, -209.907, -55.9099, -203.926, -53.4892, -207.059, -51.7805, -205.35, -52.9196, -201.22, -51.6381, -199.369, -54.2012, -188.405, -56.9067, -186.554, -58.3307, -181.285, -60.3242, -177.868, -59.0427, -172.029, -65.3081, -170.605, -65.3081, -168.612, -61.6058, -165.906, -66.3049, -163.343, -70.4343, -164.767, -71.4311, -159.214, -74.279, -155.511, -77.8389, -154.942, -78.9781, -152.664, -75.8453, -152.094, -72.855, -150.243, -71.8583, -143.835, -76.4149, -143.408, -77.6965, -133.725, -82.3956, -132.87, -80.402, -124.754, -84.3891, -119.201, -91.0817, -119.485, -94.9264, -116.068, -100.48, -119.201, -105.464, -115.356, -115.716, -115.641, -115.574, -121.052, -130.627, -128.201, -128.959, -121.194, -134.797, -118.346, -139.366, -121.109, -145.05, -121.906, -151.03, -124.042, -153.451, -127.744, -163.276, -127.175, -173.741, -128.574, -173.3, -132.398, -180.21, -132.017, -180.674, -129.349, -195.52, -135.264, -201.011, -136.43, -204.714, -138.994, -208.558, -136.146, -220.092, -138.566, -222.655, -143.123, -229.206, -140.987, -235.471, -142.696, -237.749, -141.414, -252.986, -144.689, -260.39, -138.139, -267.368, -135.861, -273.348, -139.563, -275.199, -136.573, -280.895, -138.139, -282.319, -135.434, -286.733, -138.851, -290.009, -135.861, -300.403, -137.285, -302.112, -135.291, -307.523, -138.139 )
+
+[node name="name" type="Label" parent="world/prov2"]
+
+margin_left = -236.0
+margin_top = -238.0
+margin_right = -136.0
+margin_bottom = -208.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Blackhampton"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="data" type="HBoxContainer" parent="world/prov2"]
+
+editor/display_folded = true
+margin_left = -245.0
+margin_top = -208.0
+margin_right = -92.0
+margin_bottom = -168.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = -13
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="low_wealth" type="TextureRect" parent="world/prov2/data"]
+
+margin_right = 20.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="wealth" type="TextureProgress" parent="world/prov2/data"]
+
+show_behind_parent = true
+margin_left = 7.0
+margin_right = 112.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 50.0
+exp_edit = false
+rounded = false
+texture_under = ExtResource( 10 )
+texture_over = ExtResource( 11 )
+texture_progress = ExtResource( 12 )
+radial_fill_degrees = 360.0
+radial_center_offset = Vector2( 0, 0 )
+_sections_unfolded = [ "Mouse", "Radial Fill", "Rect", "Textures" ]
+
+[node name="high_wealth" type="TextureRect" parent="world/prov2/data"]
+
+margin_left = 99.0
+margin_right = 119.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 13 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="prov3" type="Node2D" parent="world"]
+
+script = ExtResource( 3 )
+name = "Holmstoke"
+wealth = 50
+
+[node name="sprite" type="AnimatedSprite" parent="world/prov3"]
+
+frames = SubResource( 5 )
+animation = "player"
+
+[node name="area" type="Area2D" parent="world/prov3"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="polygon" type="CollisionPolygon2D" parent="world/prov3/area"]
+
+build_mode = 0
+polygon = PoolVector2Array( -50.6733, -198.806, -53.5005, -200.991, -51.7014, -204.461, -53.2435, -207.288, -55.4282, -204.846, -55.4282, -209.601, -59.7977, -212.557, -59.0266, -215.384, -66.3518, -222.195, -65.5807, -225.794, -68.2795, -231.063, -75.2191, -232.091, -71.4922, -235.561, -77.1468, -238.131, -77.0183, -242.5, -80.6166, -243.657, -82.9299, -249.568, -88.1989, -248.926, -89.484, -252.781, -93.5964, -250.468, -94.2389, -261.391, -98.3513, -262.548, -99.5079, -265.504, -104.648, -268.974, -104.006, -273.086, -80.1026, -273.472, -73.677, -279.769, -76.1187, -285.809, -74.191, -290.307, -68.1509, -289.664, -63.139, -288.765, -51.5729, -286.323, -43.7336, -290.821, -33.3242, -291.078, -23.0432, -293.777, -17.6457, -287.993, 3.55884, -298.66, 11.3981, -309.455, 27.0765, -312.282, 33.2452, -318.065, 35.6869, -328.218, 56.2488, -337.728, 71.7988, -331.045, 88.6339, -343.896, 113.308, -344.539, 103.413, -334.258, 108.425, -330.66, 117.935, -330.146, 126.545, -336.443, 137.726, -334.386, 148.521, -343.125, 169.211, -337.599, 169.725, -323.72, 182.319, -315.624, 183.861, -304.829, 172.424, -296.09, 171.91, -287.351, 177.693, -280.154, 180.006, -270.516, 178.078, -256.637, 185.918, -246.87, 185.018, -240.058, 177.693, -234.918, 168.44, -233.376, 165.356, -230.035, 171.91, -207.416, 164.97, -202.918, 165.227, -198.421, 160.215, -193.923, 156.745, -195.208, 156.874, -189.81, 151.091, -189.81, 148.392, -191.352, 145.565, -187.24, 145.693, -183.77, 141.709, -183.899, 141.709, -180.172, 137.983, -177.087, 140.424, -171.176, 133.613, -170.662, 127.059, -175.031, 123.975, -164.236, 125.003, -158.967, 119.605, -156.783, 119.734, -152.285, 116.264, -149.329, 105.854, -148.943, 104.569, -140.847, 99.5574, -138.405, 94.5454, -141.618, 93.2603, -146.116, 96.3446, -148.429, 91.9752, -151.514, 88.1198, -148.172, 81.1802, -145.474, 77.0679, -149.843, 70.2567, -149.329, 68.7146, -153.184, 62.2889, -153.056, 58.9476, -156.397, 51.8795, -155.369, 50.0803, -162.566, 44.5543, -157.939, 38.7712, -162.18, 39.4138, -167.192, 34.0163, -168.092, 30.0323, -165.521, 25.0203, -165.264, 14.3538, -176.959, 14.9964, -180.429, 8.69928, -179.658, 5.22943, -171.947, -0.16803, -171.947, -8.52136, -186.726, -14.5613, -187.368, -18.2882, -184.156, -25.4849, -188.525, -26.6415, -193.923, -36.7939, -193.152, -40.6493, -198.806 )
+
+[node name="name" type="Label" parent="world/prov3"]
+
+margin_left = 14.0
+margin_top = -263.0
+margin_right = 114.0
+margin_bottom = -233.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Holmstoke"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="data" type="HBoxContainer" parent="world/prov3"]
+
+margin_left = 3.0
+margin_top = -232.0
+margin_right = 156.0
+margin_bottom = -192.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = -13
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="low_wealth" type="TextureRect" parent="world/prov3/data"]
+
+margin_right = 20.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="wealth" type="TextureProgress" parent="world/prov3/data"]
+
+show_behind_parent = true
+margin_left = 7.0
+margin_right = 112.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 50.0
+exp_edit = false
+rounded = false
+texture_under = ExtResource( 10 )
+texture_over = ExtResource( 11 )
+texture_progress = ExtResource( 12 )
+radial_fill_degrees = 360.0
+radial_center_offset = Vector2( 0, 0 )
+_sections_unfolded = [ "Mouse", "Radial Fill", "Rect", "Textures" ]
+
+[node name="high_wealth" type="TextureRect" parent="world/prov3/data"]
+
+margin_left = 99.0
+margin_right = 119.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 13 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="prov4" type="Node2D" parent="world"]
+
+script = ExtResource( 3 )
+name = "Esfield"
+wealth = 50
+
+[node name="sprite" type="AnimatedSprite" parent="world/prov4"]
+
+frames = SubResource( 6 )
+animation = "player"
+
+[node name="area" type="Area2D" parent="world/prov4"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="polygon" type="CollisionPolygon2D" parent="world/prov4/area"]
+
+build_mode = 0
+polygon = PoolVector2Array( 104.445, 49.6398, 100.358, 43.216, 99.1897, 36.2083, 104.445, 31.2445, 100.066, 27.4486, 99.4817, 17.813, 105.321, 16.353, 100.65, 10.2213, 104.154, 2.92154, 95.9778, -1.45831, 108.241, -9.34201, 97.4377, -33.5771, 109.701, -40.0009, 97.7297, -54.0163, 101.526, -64.8199, 91.014, -71.2437, 88.6781, -80.0034, 97.1458, -77.9594, 102.694, -81.1713, 92.4739, -92.2669, 103.862, -114.166, 99.4817, -116.794, 104.737, -120.006, 99.1897, -128.182, 101.234, -139.569, 106.197, -149.497, 116.125, -148.329, 119.921, -152.709, 120.505, -157.38, 124.593, -158.256, 123.133, -164.388, 126.637, -174.316, 139.484, -171.104, 139.484, -178.404, 141.82, -183.367, 145.032, -183.076, 147.952, -191.251, 157.003, -188.915, 155.836, -195.047, 162.843, -195.047, 166.055, -199.135, 165.179, -202.347, 170.143, -206.143, 192.626, -193.295, 208.686, -188.039, 224.453, -189.499, 225.913, -210.814, 232.337, -210.522, 240.512, -202.055, 256.28, -192.419, 274.967, -201.471, 285.479, -200.595, 295.99, -190.667, 285.771, -178.696, 288.107, -173.732, 288.107, -166.14, 304.75, -168.476, 310.006, -159.424, 307.378, -135.481, 321.101, -122.05, 334.533, -110.37, 340.957, -97.5227, 330.737, -82.0473, 329.861, -75.9155, 338.621, -63.652, 329.861, -52.2644, 333.949, -43.2128, 343.585, -48.7606, 355.556, -37.665, 344.461, -22.7735, 347.672, 0.585602, 345.336, 18.9809, 329.861, 32.1204, 312.926, 38.8362, 296.282, 36.5002, 275.551, 33.2884, 261.536, 36.5002, 252.776, 45.8439, 199.926, 60.7354, 185.91, 56.0635, 164.595, 43.8, 141.236, 49.9318 )
+
+[node name="name" type="Label" parent="world/prov4"]
+
+margin_left = 182.0
+margin_top = -94.0
+margin_right = 282.0
+margin_bottom = -64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Esfield"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="data" type="HBoxContainer" parent="world/prov4"]
+
+margin_left = 169.0
+margin_top = -64.0
+margin_right = 322.0
+margin_bottom = -24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = -13
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="low_wealth" type="TextureRect" parent="world/prov4/data"]
+
+margin_right = 20.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="wealth" type="TextureProgress" parent="world/prov4/data"]
+
+show_behind_parent = true
+margin_left = 7.0
+margin_right = 112.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 50.0
+exp_edit = false
+rounded = false
+texture_under = ExtResource( 10 )
+texture_over = ExtResource( 11 )
+texture_progress = ExtResource( 12 )
+radial_fill_degrees = 360.0
+radial_center_offset = Vector2( 0, 0 )
+_sections_unfolded = [ "Mouse", "Radial Fill", "Rect", "Textures" ]
+
+[node name="high_wealth" type="TextureRect" parent="world/prov4/data"]
+
+margin_left = 99.0
+margin_right = 119.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 13 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="prov5" type="Node2D" parent="world"]
+
+script = ExtResource( 3 )
+name = "Whelton"
+wealth = 50
+
+[node name="sprite" type="AnimatedSprite" parent="world/prov5"]
+
+frames = SubResource( 7 )
+animation = "player"
+
+[node name="area" type="Area2D" parent="world/prov5"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="polygon" type="CollisionPolygon2D" parent="world/prov5/area"]
+
+build_mode = 0
+polygon = PoolVector2Array( -84.3982, 74.0642, -88.9467, 67.4136, -87.0149, 56.6816, -90.8784, 50.8864, -89.1613, 47.2375, -97.5322, 40.5837, -97.7468, 36.9348, -87.6588, 38.008, -95.8151, 19.3345, -91.093, 14.1831, -100.323, 5.5976, -96.459, 2.37799, -98.3907, -1.91476, -94.7419, -3.20261, -93.4541, -14.5785, -96.2444, -18.6566, -91.3077, -19.5152, -91.7369, -26.8129, -97.7468, -26.1689, -96.2443, -32.6082, -89.3759, -37.1155, -96.2443, -55.3599, -94.0979, -63.9454, -88.3027, -68.8821, -90.8784, -74.0334, -87.6588, -81.1165, -90.4491, -85.8386, -83.366, -91.2045, -87.6588, -100.863, -81.0049, -108.161, -84.2245, -120.181, -80.1464, -125.547, -83.5806, -131.986, -78.4293, -133.274, -76.9268, -143.576, -71.1316, -144.006, -72.4194, -150.016, -77.7854, -153.235, -77.1415, -154.952, -73.7073, -154.952, -71.3463, -161.821, -70.0584, -164.611, -65.3364, -163.752, -62.7607, -165.899, -65.3364, -168.26, -63.8339, -170.192, -59.7557, -171.265, -60.8289, -178.562, -56.1069, -182.426, -58.2533, -187.577, -53.7458, -190.797, -52.458, -197.88, -40.009, -198.953, -37.4333, -193.587, -26.4868, -193.587, -25.1989, -187.577, -19.4037, -183.928, -13.8231, -187.577, -8.02783, -186.504, 0.128479, -172.123, 5.49445, -171.05, 9.78723, -179.421, 14.2946, -179.85, 14.9385, -176.845, 25.4559, -165.899, 31.4658, -165.47, 34.256, -167.831, 38.9781, -166.972, 39.4073, -160.962, 45.2026, -157.313, 50.9979, -162.465, 51.6418, -155.811, 59.1542, -156.025, 63.4469, -152.162, 68.3836, -152.377, 70.9593, -148.084, 76.5399, -148.942, 81.9059, -144.65, 85.5547, -147.654, 88.7743, -147.869, 92.8524, -151.303, 96.2866, -148.298, 93.4963, -144.65, 95.6427, -139.927, 102.297, -136.708, 102.297, -129.625, 100.579, -126.62, 102.511, -124.474, 103.799, -118.464, 99.9355, -116.747, 103.799, -114.385, 93.9256, -92.2777, 102.94, -82.619, 98.2184, -77.6823, 90.2767, -78.9701, 92.6378, -70.5992, 101.009, -65.4478, 97.3599, -52.9988, 110.667, -41.1937, 96.5013, -32.3935, 107.233, -9.64175, 97.7891, -1.91476, 104.443, 3.02191, 101.009, 10.7489, 106.375, 15.0417, 99.0769, 19.3345, 101.223, 25.559, 98.2183, 27.0615, 103.584, 30.925, 99.2915, 37.7934, 101.438, 40.7983, 100.365, 45.9497, 104.228, 50.4571, 85.1254, 65.0526, 73.1057, 57.9695, 66.0226, 65.2672, 54.8614, 68.2721, 54.0028, 76.8577, 49.2808, 78.7894, 32.1097, 66.3404, 16.6557, 79.2187, -2.6618, 87.8043, -9.31561, 87.375, -18.1158, 73.6381, -25.6282, 74.0674, -37.2187, 92.9556, -42.1553, 92.7409, -53.7458, 80.9358, -66.6242, 80.9358, -79.9318, 73.6381 )
+
+[node name="name" type="Label" parent="world/prov5"]
+
+margin_left = -46.0
+margin_top = -56.0
+margin_right = 54.0
+margin_bottom = -26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Whelton"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="data" type="HBoxContainer" parent="world/prov5"]
+
+margin_left = -60.0
+margin_top = -26.0
+margin_right = 93.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = -13
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="low_wealth" type="TextureRect" parent="world/prov5/data"]
+
+margin_right = 20.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="wealth" type="TextureProgress" parent="world/prov5/data"]
+
+show_behind_parent = true
+margin_left = 7.0
+margin_right = 112.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 50.0
+exp_edit = false
+rounded = false
+texture_under = ExtResource( 10 )
+texture_over = ExtResource( 11 )
+texture_progress = ExtResource( 12 )
+radial_fill_degrees = 360.0
+radial_center_offset = Vector2( 0, 0 )
+_sections_unfolded = [ "Mouse", "Radial Fill", "Rect", "Textures", "Visibility" ]
+
+[node name="high_wealth" type="TextureRect" parent="world/prov5/data"]
+
+margin_left = 99.0
+margin_right = 119.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 13 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="enemy1" type="Node2D" parent="world"]
+
+script = ExtResource( 34 )
+name = "Worpton"
+
+[node name="sprite" type="AnimatedSprite" parent="world/enemy1"]
+
+frames = SubResource( 8 )
+animation = "default"
+
+[node name="name" type="Label" parent="world/enemy1"]
+
+margin_left = -493.0
+margin_top = -81.0
+margin_right = -411.0
+margin_bottom = -51.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Worpton"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="enemy2" type="Node2D" parent="world"]
+
+editor/display_folded = true
+script = ExtResource( 34 )
+name = "Aldean"
+
+[node name="sprite" type="AnimatedSprite" parent="world/enemy2"]
+
+frames = SubResource( 9 )
+animation = "default"
+
+[node name="name" type="Label" parent="world/enemy2"]
+
+margin_left = 107.0
+margin_top = -410.0
+margin_right = 189.0
+margin_bottom = -380.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Aldean"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="enemy3" type="Node2D" parent="world"]
+
+editor/display_folded = true
+script = ExtResource( 34 )
+name = "Marlock"
+
+[node name="sprite" type="AnimatedSprite" parent="world/enemy3"]
+
+frames = SubResource( 10 )
+animation = "default"
+
+[node name="name" type="Label" parent="world/enemy3"]
+
+margin_left = 425.0
+margin_top = -183.0
+margin_right = 507.0
+margin_bottom = -153.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Marlock"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="enemy4" type="Node2D" parent="world"]
+
+script = ExtResource( 34 )
+name = "Sotho"
+
+[node name="sprite" type="AnimatedSprite" parent="world/enemy4"]
+
+frames = SubResource( 11 )
+animation = "default"
+
+[node name="name" type="Label" parent="world/enemy4"]
+
+margin_left = 203.0
+margin_top = 109.0
+margin_right = 285.0
+margin_bottom = 139.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "Sotho"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="council" type="Control" parent="."]
+
+margin_left = 20.0
+margin_top = 685.0
+margin_right = 1180.0
+margin_bottom = 885.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 39 )
+_sections_unfolded = [ "Anchor", "Margin" ]
+options_scene = ExtResource( 40 )
+
+[node name="text_box" type="Panel" parent="council"]
+
+anchor_left = 2
+anchor_top = 2
+anchor_right = 2
+anchor_bottom = 2
+margin_left = 580.0
+margin_top = 151.0
+margin_right = -580.0
+margin_bottom = -98.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/panel = SubResource( 12 )
+_sections_unfolded = [ "Margin", "custom_styles" ]
+
+[node name="margin" type="MarginContainer" parent="council/text_box"]
+
+margin_left = 195.0
+margin_top = 4.0
+margin_right = 1150.0
+margin_bottom = 239.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Margin" ]
+
+[node name="container" type="VBoxContainer" parent="council/text_box/margin"]
+
+margin_left = 8.0
+margin_right = 955.0
+margin_bottom = 235.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 2
+alignment = 0
+_sections_unfolded = [ "Margin", "custom_constants" ]
+
+[node name="name" type="Label" parent="council/text_box/margin/container"]
+
+margin_right = 947.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "<character name>:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin", "custom_colors", "custom_fonts" ]
+
+[node name="text" type="RichTextLabel" parent="council/text_box/margin/container"]
+
+margin_top = 32.0
+margin_right = 947.0
+margin_bottom = 137.0
+rect_min_size = Vector2( 0, 105 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/italics_font = SubResource( 15 )
+custom_fonts/bold_font = SubResource( 16 )
+custom_fonts/normal_font = SubResource( 17 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "<event text>"
+visible_characters = -1
+percent_visible = 1.0
+_sections_unfolded = [ "BBCode", "Margin", "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="options" type="VBoxContainer" parent="council/text_box/margin/container"]
+
+margin_top = 139.0
+margin_right = 947.0
+margin_bottom = 139.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = -2
+alignment = 0
+_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "custom_constants" ]
+
+[node name="portrait" type="Panel" parent="council"]
+
+anchor_left = 2
+anchor_top = 2
+anchor_right = 2
+anchor_bottom = 2
+margin_left = 554.0
+margin_top = 197.0
+margin_right = 390.0
+margin_bottom = -63.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/panel = SubResource( 18 )
+script = ExtResource( 43 )
+_sections_unfolded = [ "Anchor", "Hint", "Margin", "Theme", "custom_styles" ]
+
+[node name="bishop" type="TextureRect" parent="council/portrait"]
+
+anchor_left = 2
+anchor_top = 2
+anchor_right = 2
+anchor_bottom = 2
+margin_left = 80.0
+margin_top = 128.0
+margin_right = -80.0
+margin_bottom = -130.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 44 )
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="merchant" type="TextureRect" parent="council/portrait"]
+
+anchor_left = 2
+anchor_top = 2
+anchor_right = 2
+anchor_bottom = 2
+margin_left = 80.0
+margin_top = 128.0
+margin_right = -80.0
+margin_bottom = -130.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 45 )
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="advisor" type="TextureRect" parent="council/portrait"]
+
+anchor_left = 2
+anchor_top = 2
+anchor_right = 2
+anchor_bottom = 2
+margin_left = 80.0
+margin_top = 128.0
+margin_right = -80.0
+margin_bottom = -130.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 46 )
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="general" type="TextureRect" parent="council/portrait"]
+
+anchor_left = 2
+anchor_top = 2
+anchor_right = 2
+anchor_bottom = 2
+margin_left = 80.0
+margin_top = 128.0
+margin_right = -80.0
+margin_bottom = -130.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 47 )
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="baroness" type="TextureRect" parent="council/portrait"]
+
+anchor_left = 2
+anchor_top = 2
+anchor_right = 2
+anchor_bottom = 2
+margin_left = 80.0
+margin_top = 128.0
+margin_right = -80.0
+margin_bottom = -130.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 48 )
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="day" type="Label" parent="council"]
+
+margin_left = 1012.0
+margin_top = -45.0
+margin_right = 1153.0
+margin_bottom = -20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 19 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "<day>"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="debug_ui" type="Control" parent="."]
+
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Margin" ]
+
+[node name="container" type="VBoxContainer" parent="debug_ui"]
+
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="temperature" type="Label" parent="debug_ui/container"]
+
+margin_right = 115.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 21 )
+text = "<temperature>"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="event_id" type="Label" parent="debug_ui/container"]
+
+margin_top = 29.0
+margin_right = 115.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 21 )
+text = "<event_id>"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[connection signal="mouse_entered" from="world/prov1/area" to="world/prov1" method="_on_area_mouse_entered"]
+
+[connection signal="mouse_exited" from="world/prov1/area" to="world/prov1" method="_on_area_mouse_exited"]
+
+[connection signal="mouse_entered" from="world/prov2/area" to="world/prov2" method="_on_area_mouse_entered"]
+
+[connection signal="mouse_exited" from="world/prov2/area" to="world/prov2" method="_on_area_mouse_exited"]
+
+[connection signal="mouse_entered" from="world/prov3/area" to="world/prov3" method="_on_area_mouse_entered"]
+
+[connection signal="mouse_exited" from="world/prov3/area" to="world/prov3" method="_on_area_mouse_exited"]
+
+[connection signal="mouse_entered" from="world/prov4/area" to="world/prov4" method="_on_area_mouse_entered"]
+
+[connection signal="mouse_exited" from="world/prov4/area" to="world/prov4" method="_on_area_mouse_exited"]
+
+[connection signal="mouse_entered" from="world/prov5/area" to="world/prov5" method="_on_area_mouse_entered"]
+
+[connection signal="mouse_exited" from="world/prov5/area" to="world/prov5" method="_on_area_mouse_exited"]
+
+

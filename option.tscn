@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Option.gd" type="Script" id=1]
+[ext_resource path="res://resources/marker.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Vegur-Regular.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
+
+[node name="option" type="PanelContainer"]
+
+margin_right = 490.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_constants", "custom_styles" ]
+
+[node name="content" type="HBoxContainer" parent="."]
+
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 483.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Anchor", "Margin", "Mouse" ]
+
+[node name="placeholder" type="Control" parent="content"]
+
+margin_right = 20.0
+margin_bottom = 31.0
+rect_min_size = Vector2( 20, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Mouse", "Rect", "Visibility" ]
+
+[node name="marker" type="TextureRect" parent="content"]
+
+margin_left = 24.0
+margin_right = 44.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 6
+_sections_unfolded = [ "Material", "Mouse", "Rect", "Visibility" ]
+
+[node name="button" type="Button" parent="content"]
+
+margin_left = 48.0
+margin_right = 176.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "<option_text>"
+flat = true
+align = 0
+_sections_unfolded = [ "Mouse", "custom_colors", "custom_fonts" ]
+
+[connection signal="gui_input" from="." to="." method="_on_option_gui_input"]
+
+[connection signal="mouse_entered" from="." to="." method="_on_option_mouse_entered"]
+
+[connection signal="mouse_exited" from="." to="." method="_on_option_mouse_exited"]
+
+
